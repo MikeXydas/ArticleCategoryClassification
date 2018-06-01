@@ -68,5 +68,5 @@ After having built an environment with the `requirements.txt` installed run the 
    
 ## Train_set  
   
-The train_set given consist of 4k articles which is not considered a sufficient number but in our case is enough. If you want a bigger dataset I suggest something like **The 20 newsgroups text dataset**  
+The train_set given consist of 4k articles which is not considered a sufficient number but in our case is enough. If you want a bigger dataset we suggest something like **The 20 newsgroups text dataset**  
 http://scikit-learn.org/stable/datasets/twenty_newsgroups.html
