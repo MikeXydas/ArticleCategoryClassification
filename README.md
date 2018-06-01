@@ -16,7 +16,7 @@ articles on a category according to their content.
 
 ## Running:
 
-After having built an environment with the `requirements.txt` installed run the `classify.py` module
+After having built an environment with the `requirements.txt` installed to run the `classify.py` module
 
 ## Summary of the module
 
@@ -29,7 +29,7 @@ After having built an environment with the `requirements.txt` installed run the 
     - Stopwords: We remove from the content of the article a set of stopwords which do not offer any useful information  
     Like "the", and", "have" etc.
     - Punctuation: We remove any punctuation
-    - Lematisation: determining the lemma of a word based on its intended meaning: better -> good, walked -> walk
+    - Lemmatisation: determining the lemma of a word based on its intended meaning: better -> good, walked -> walk
     
 2. **Vectorising**  
     We will first explain what the simple CountVectorizer does and then what extra the TfidVectorizer offers (which is the one that we use).   
@@ -55,7 +55,7 @@ After having built an environment with the `requirements.txt` installed run the 
       However, in the `classify.py` we use the Tfid_vectorizer. In a similar way instead of having a number of appearances of 
       each word, we have a number f representing a frequency of that word (0 <= f <= 1).  
       More on the tfid_vectorizer: http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfTransformer.html#sklearn.feature_extraction.text.TfidfTransformer  
-     An important parameter of the tfid_vectorizer which can be tweaked in order to achieve optimum accuracy is the max_fd. Max_fd is an upper limit of the allowed frequencies of each word. For example if we have a max_df of 0.8 and a word appears into 9 out of 10 articles then that specific word won't make it into the vector.  
+     An important parameter of the tfid_vectorizer which can be tweaked in order to achieve optimum accuracy is the max_fd. Max_fd is an upper limit of the allowed frequencies of each word. For example, if we have a max_df of 0.8 and a word appears in 9 out of 10 articles then that specific word won't make it into the vector.  
      
 3. **LSI truncating (Latent Semantic Indexing)**  
    As you may expect, the train_set is big and we will end up with a vector that has too many columns. LSI is a way of reducing the column number without losing much of the useful information. This ends up on a great speed up of the training and cross-validation following.  
@@ -70,3 +70,7 @@ After having built an environment with the `requirements.txt` installed run the 
   
 The train_set given consist of 4k articles which is not considered a sufficient number but in our case is enough. If you want a bigger dataset we suggest something like **The 20 newsgroups text dataset**  
 http://scikit-learn.org/stable/datasets/twenty_newsgroups.html
+
+## What can be changed?
+  
+Pretty much everything. You can change the preprocessing of the articles in order to keep more useful information. You can change the max_df/min_df parameters, the classifier parameters and maybe add more features. Generally, your goal is to increase the accuracy by any means. However, I would defenitely suggest picking a better and larger train_set because with the current one you will end up overfitting.
