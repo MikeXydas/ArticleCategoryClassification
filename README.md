@@ -4,7 +4,7 @@ A python module which trains different classification models in order to predict
 
 ## Introduction
   
-The train_set consists of 12k articles which are used to train our models, in order to be able to classify  
+The train_set consists of 4k articles which are used to train our models, in order to be able to classify  
 articles on a category according to their content.  
 
 **Classification algorithms used:**
@@ -65,3 +65,8 @@ After having built an environment with the `requirements.txt` installed run the 
    Then we perform a kFold. kFold slices our X_train and Y_train into k equally sized parts. We then use k - 1 parts for fitting (training the model) and the k part to test the accuracy of our fitted models.  
    This is repeated k times so as each part becomes exactly one time the test part.   
    The metric returned for each model is the accuracy. You can also change that and show more metrics such as precision or f-measure.  
+   
+## Train_set  
+  
+The train_set given consist of 4k articles which is not considered a sufficient number but in our case is enough. If you want a bigger dataset I suggest something like **The 20 newsgroups text dataset**  
+http://scikit-learn.org/stable/datasets/twenty_newsgroups.html
