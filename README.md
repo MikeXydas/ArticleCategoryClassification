@@ -13,11 +13,13 @@ articles on a category according to their content.
 - Naive Bayes
 - Random Forest
 - K-Nearest Neighbors (KNN)
-
+  
+  
 ## Running:
 
 After having built an environment with the `requirements.txt` installed to run the `classify.py` module
 
+  
 ## Summary of the module
 
 1. **Importing and preprocessing**  
@@ -66,11 +68,13 @@ After having built an environment with the `requirements.txt` installed to run t
    This is repeated k times so as each part becomes exactly one time the test part.   
    The metric returned for each model is the accuracy. You can also change that and show more metrics such as precision or f-measure.  
    
+   
 ## Train_set  
   
 The train_set given consist of 4k articles which is not considered a sufficient number but in our case is enough. If you want a bigger dataset we suggest something like **The 20 newsgroups text dataset**  
 http://scikit-learn.org/stable/datasets/twenty_newsgroups.html
 
+  
 ## What can be changed?
   
 Pretty much everything. You can change the preprocessing of the articles in order to keep more useful information. You can change the max_df/min_df parameters, the classifier parameters and maybe add more features. Generally, your goal is to increase the accuracy by any means. However, I would defenitely suggest picking a better and larger train_set because with the current one you will end up overfitting.
